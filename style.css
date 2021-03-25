@@ -1,0 +1,87 @@
+body {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  margin: 0;
+  left: 0;
+  top: 0;
+}
+body button {
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  transform: translateY(-50%);
+  top: 50%;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+body button line,
+body button path,
+body button circle {
+  display: block;
+}
+body button p {
+  color: #bfbfbf;
+  font-family: "PT Sans", sans-serif;
+  font-size: 17px;
+  letter-spacing: 4px;
+  text-indent: 4px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 20px;
+  margin-top: 5px;
+}
+body button:focus {
+  outline: 0;
+}
+body button .circle {
+  display: none;
+}
+body button .loader {
+  stroke: #3db0fa;
+  opacity: 0;
+  stroke-dasharray: 232;
+  transition: opacity 0s;
+}
+body button .complete {
+  opacity: 0;
+}
+body button #shape,
+body button .arrow line,
+body button p {
+  transition: color 0.3s, stroke 0.3s, letter-spacing 0.3s, font-size 0.3s,
+    text-indent 0.3s;
+}
+body button .arrow path {
+  transition: stroke 0.3s;
+}
+body button.active:hover .arrow line,
+body button.active:hover #shape {
+  stroke: #bfbfbf;
+  transition: stroke 0.3s;
+}
+body button:hover .arrow line,
+body button:hover #shape {
+  stroke: #3db0fa;
+  transition: stroke 0.3s;
+}
+body button:hover p {
+  letter-spacing: 6px;
+  color: #3db0fa;
+  font-size: 19px;
+  text-indent: 6px;
+}
+
+body button #svg {
+  display: block;
+}
+body button .processing {
+  display: none;
+}
+body button[disabled] #svg {
+  display: none;
+}
+body button[disabled] .processing {
+  display: block;
+}
